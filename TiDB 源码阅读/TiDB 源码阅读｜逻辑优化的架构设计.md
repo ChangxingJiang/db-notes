@@ -1,4 +1,4 @@
-# 逻辑优化的入口逻辑
+# TiDB 源码阅读｜逻辑优化的架构设计
 
 本文将介绍 TiDB 中逻辑优化的入口逻辑，包括入口函数、优化规则的统一结构和逻辑优化规则列表。
 
@@ -95,6 +95,7 @@ type LogicalOptRule interface {
 - `LogicalPlan`：待优化的逻辑计划
 - `*optimizetrace.LogicalOptimizeOp`：优化跟踪操作对象
   
+
 返回值：
 - `LogicalPlan`：优化后的逻辑计划
 - `bool`：表示计划是否被修改，如果计划被修改返回 `true`，否则返回 `false`
