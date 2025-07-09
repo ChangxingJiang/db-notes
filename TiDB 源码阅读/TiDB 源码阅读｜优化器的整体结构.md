@@ -324,7 +324,7 @@ if sessVars.EvolvePlanBaselines && bestPlanFromBind != nil &&
 
 **步骤 1**：构建逻辑计划
 
-在这一步骤中，系统首先初始化查询块提示处理器（`hint.NewQBHintHandler`）处理查询提示，然后从对象池中获取一个计划构建器（`PlanBuilder`）实例并进行初始化。最后，调用 `buildLogicalPlan` 函数（位于 `pkg/planner/core/planbuilder.go` 文件中）根据 AST 节点构建初始的逻辑计划。这个阶段是整个优化过程的起点，它将 SQL 的语法结构转换为优化器能够处理的逻辑执行计划。
+在这一步骤中，系统首先初始化查询块提示处理器（`hint.NewQBHintHandler`）处理查询提示，然后从对象池中获取一个计划构建器（`PlanBuilder`）实例并进行初始化。最后，调用 `buildLogicalPlan` 函数（位于 `pkg/planner/core/optimize.go` 文件中）根据 AST 节点构建初始的逻辑计划。这个阶段是整个优化过程的起点，它将 SQL 的语法结构转换为优化器能够处理的逻辑执行计划。
 
 ```go
 hintProcessor := hint.NewQBHintHandler(sctx.GetSessionVars().StmtCtx)
