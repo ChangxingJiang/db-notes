@@ -1,4 +1,4 @@
-# TiDB 源码阅读｜执行计划类型结构
+# TiDB 源码阅读｜执行计划类型实现的接口
 
 TiDB 中的执行计划接口位于 `pkg/planner/core/base/plan_base.go` 文件中，包含如下三个层次：
 
@@ -6,7 +6,7 @@ TiDB 中的执行计划接口位于 `pkg/planner/core/base/plan_base.go` 文件�
 2. **`LogicalPlan` 接口**：继承自 `Plan` 接口，定义了逻辑执行计划特有的方法，主要用于逻辑优化阶段
 3. **`PhysicalPlan` 接口**：继承自 `Plan` 接口，定义了物理执行计划特有的方法，主要用于物理优化和执行阶段
 
-## 执行计划的基础接口
+## 执行计划实现的基础接口
 
 `Plan` 接口定义了逻辑执行计划和物理执行计划的通用方法：
 
@@ -32,7 +32,7 @@ TiDB 中的执行计划接口位于 `pkg/planner/core/base/plan_base.go` 文件�
 
 - **`property.StatsInfo`**：在 `pkg/planner/property/stats_info.go` 中定义的结构体，存储计划输出的基本统计信息，用于成本估算。它包含行数（RowCount）、列的 NDV（不同值的数量）、直方图集合等信息，并提供了缩放统计信息、获取列组 NDV 等方法，是优化器进行成本估算的重要依据。
 
-## 物理执行计划接口
+## 物理执行计划实现的接口
 
 `PhysicalPlan` 接口继承自 `Plan` 接口，额外定义了物理执行计划特有的方法：
 
@@ -63,7 +63,7 @@ TiDB 中的执行计划接口位于 `pkg/planner/core/base/plan_base.go` 文件�
 
 - **`optimizetrace.PhysicalOptimizeOp`**：在 `pkg/planner/util/optimizetrace/opt_tracer.go` 中定义的结构体，用于物理优化过程的追踪记录。它封装了 `tracing.PhysicalOptimizeTracer`，提供了添加候选计划、获取追踪器等方法，帮助记录和分析物理优化过程中的决策和计划转换，对于优化器调试和性能分析非常重要。
 
-## 逻辑执行计划接口
+## 逻辑执行计划实现的接口
 
 `LogicalPlan` 接口继承自 `Plan` 接口，额外定义了逻辑执行计划特有的方法：
 
