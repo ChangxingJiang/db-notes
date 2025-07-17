@@ -1,4 +1,4 @@
-# 构造逻辑执行计划：DISTINCT 算子
+# TiDB 源码阅读｜构造逻辑执行计划：DISTINCT 算子
 
 在 SQL 查询中，`DISTINCT` 关键字用于去除结果集中的重复行。TiDB 在构建逻辑执行计划时，通过 `Planbuilder.buildDistinct` 函数将 `DISTINCT` 转换为一个特殊的聚合（Aggregation）算子来实现去重，具体地：
 
