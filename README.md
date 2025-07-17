@@ -12,5 +12,6 @@
   - [构造逻辑执行计划：处理 FROM 子句](https://github.com/ChangxingJiang/db-notes/blob/main/TiDB%20%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/%E6%9E%84%E9%80%A0%E9%80%BB%E8%BE%91%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92%EF%BC%9A%E5%A4%84%E7%90%86%20FROM%20%E5%AD%90%E5%8F%A5.md)
   - [构造逻辑执行计划：通配符展开](https://github.com/ChangxingJiang/db-notes/blob/main/TiDB%20%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/%E6%9E%84%E9%80%A0%E9%80%BB%E8%BE%91%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92%EF%BC%9A%E9%80%9A%E9%85%8D%E7%AC%A6%E5%B1%95%E5%BC%80.md)
   - [构造逻辑执行计划：输出列命名](https://github.com/ChangxingJiang/db-notes/blob/main/TiDB%20%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/%E6%9E%84%E9%80%A0%E9%80%BB%E8%BE%91%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92%EF%BC%9A%E8%BE%93%E5%87%BA%E5%88%97%E5%91%BD%E5%90%8D.md)
+  - [构造逻辑执行计划：DISTINCT 算子](https://github.com/ChangxingJiang/db-notes/blob/main/TiDB%20%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/%E6%9E%84%E9%80%A0%E9%80%BB%E8%BE%91%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92%EF%BC%9ADISTINCT%20%E7%AE%97%E5%AD%90.md)
 - [逻辑优化的架构设计](https://github.com/ChangxingJiang/db-notes/blob/main/TiDB%20%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/%E9%80%BB%E8%BE%91%E4%BC%98%E5%8C%96%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md)
   - 逻辑优化规则：谓词下推
