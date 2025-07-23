@@ -1,4 +1,4 @@
-# 构造逻辑执行计划：处理 GROUP BY 子句
+# TiDB 源码阅读｜构造逻辑执行计划：处理 GROUP BY 子句
 
 ## `buildSelect` 函数处理 `GROUP BY` 子句的流程
 
