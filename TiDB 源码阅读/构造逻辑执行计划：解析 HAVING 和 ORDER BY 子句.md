@@ -1,4 +1,4 @@
-# 构造逻辑执行计划：解析 HAVING 和 ORDER BY 子句
+# TiDB 源码阅读｜构造逻辑执行计划：解析 HAVING 和 ORDER BY 子句
 
 在 `Planbuilder.buildSelect` 函数（位于 `tidb/pkg/planner/core/logical_plan_builder.go`）中，必须在构建投影（Projection）之前调用 `resolveHavingAndOrderBy` 函数，解析 `HAVING` 和 `ORDER BY` 子句，以保证诸如 `select a+1 as b from t having sum(b) < 0` 中的 `sum(b)` 可以被替换为 `sum(a+1)`。
 
